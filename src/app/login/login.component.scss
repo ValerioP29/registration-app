@@ -1,0 +1,9 @@
+// Stili per il form di login
+@import '../../styles/variables';
+.container {
+  max-width: 400px;
+}
+
+h2 {
+  color: $primary-color;
+}

@@ -1,0 +1,92 @@
+<div class="container mt-5">
+  <h2>Registrazione</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input
+        type="text"
+        id="nome"
+        formControlName="firstName"
+        class="form-control"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="cognome" class="form-label">Cognome</label>
+      <input
+        type="text"
+        id="cognome"
+        formControlName="lastName"
+        class="form-control"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input
+        type="text"
+        id="username"
+        formControlName="username"
+        class="form-control"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        class="form-control"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="confirmPassword" class="form-label">Conferma Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        class="form-control"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="genere" class="form-label">Genere</label>
+      <select id="genere" formControlName="gender" class="form-select">
+        <option value="">Seleziona...</option>
+        <option value="male">Maschio</option>
+        <option value="female">Femmina</option>
+        <option value="other">Altro</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="image" class="form-label">Immagine Profilo</label>
+      <input
+        type="file"
+        id="image"
+        formControlName="profileImage"
+        class="form-control"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="bio" class="form-label">Biografia</label>
+      <textarea
+        id="bio"
+        formControlName="bio"
+        class="form-control"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="registerForm.invalid"
+    >
+      Registrati
+    </button>
+  </form>
+</div>

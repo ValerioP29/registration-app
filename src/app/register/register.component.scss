@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+// Stili per il form di registrazione
+.container {
+  max-width: 500px;
+}
+
+h2 {
+  color: $primary-color;
+}
+
+// Stile per input e selezione
+.form-control, .form-select {
+  padding: $input-padding;
+  border-radius: $input-border-radius;
+}
